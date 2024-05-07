@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App shop</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_cart">Giỏ hàng</string>
+    <string name="nav_account">Tài khoản</string>
+    <string name="nav_cate">Danh mục sản phẩm</string>
+    <string name="nav_com">Laptop</string>
+    <string name="nav_linkien">Linh Kiện</string>
+    <string name="nav_phukien">Phụ kiện</string>
+    <string name="nav_screen">Màn hình</string>
+</resources>
