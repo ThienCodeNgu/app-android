@@ -20,15 +20,16 @@
                 android:src="@drawable/baseline_image_24"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"/>
+
             <TextView
                 android:id="@+id/item_spm_tensp"
+                android:layout_width="155dp"
+                android:layout_height="30dp"
+                android:gravity="center"
                 android:text="lap top acer"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/item_spm_gia"
                 android:text=" 10 trẹo"
