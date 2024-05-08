@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2024 at 01:30 AM
+-- Generation Time: May 08, 2024 at 03:59 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -71,6 +71,26 @@ INSERT INTO `sanpham` (`id_sanpham`, `tensanpham`, `mota`, `hinhanh`, `thongso`,
 (5, 'Lenovo LOQ 15IRH8', 'máy tính', 'https://techcare.vn/image/lenovo-loq-15irh8-1-ro7ce0j.jpg', 'CPU: Intel® Core™ i5-13420H, 8 Cores (4P + 4E) / 12 Threads, P-core up to 4.6GHz, E-core up to 3.4GHz, 12MB\r\nRAM: 1 x 8GB DDR5 5200MHz (2x SO-DIMM socket, up to 16GB SDRAM)\r\nỔ cứng: 1TB SSD M.2 2242 PCIe 4.0x4 NVMe (2 Slots: M2 2242 PCIe 4.0 x4 Slot, M.2 2280 PCIe 4.0 x4 Slot)\r\nCard đồ họa: NVIDIA® GeForce RTX™ 3050 6GB GDDR6, Boost Clock 2370MHz, TGP 95W\r\nMàn hình:15.6 inch FHD (1920x1080) IPS 350nits Anti-glare, 45% NTSC, 144Hz, G-SYNC', '18.900.000', '2024-05-08', 1),
 (6, 'Card đồ họa MSI GeForce GTX 1650 VENTUS XS 4G OC', 'linh kiện', 'https://product.hstatic.net/200000449805/product/1_16e8db7e9951469e9ff06633d8ab00f8_master.png', 'Chip đồ họa: GeForce GTX 1650\r\nBộ nhớ:	4 GB GDDR5\r\nOC Mode: Boost 1740 MHz\r\nGaming Mode: Không\r\nSố lượng đơn vị xử lý: 896 CUDA Cores\r\nTản nhiệt: 2 quạt\r\nThương hiệu: MSI\r\nXuất xứ: Trung Quốc', '4.190.000', '2024-05-08', 2);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `taikhoan`
+--
+
+CREATE TABLE `taikhoan` (
+  `email` varchar(100) NOT NULL,
+  `pass` varchar(500) NOT NULL,
+  `tenNguoiDung` varchar(500) NOT NULL,
+  `sdt` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `taikhoan`
+--
+
+INSERT INTO `taikhoan` (`email`, `pass`, `tenNguoiDung`, `sdt`) VALUES
+('thienv.22it@vku.udn.vn', '123', 'Võ Thiện', '0392796953');
+
 --
 -- Indexes for dumped tables
 --
@@ -86,6 +106,12 @@ ALTER TABLE `danhmuc`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`id_sanpham`);
+
+--
+-- Indexes for table `taikhoan`
+--
+ALTER TABLE `taikhoan`
+  ADD PRIMARY KEY (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
