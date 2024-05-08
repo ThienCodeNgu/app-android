@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
@@ -93,13 +94,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                     }
                                },
                                throwable -> {
-                                   Toast.makeText(getApplicationContext(),"không kết nối được với server"+throwable.getMessage(), Toast.LENGTH_LONG).show();
+                                   Log.d("loggg", throwable.getMessage());
+                                   //Toast.makeText(getApplicationContext(),"không kết nối được với server"+throwable.getMessage(), Toast.LENGTH_LONG).show();
                                }
                                ));
     }
-
-
-
 
     private void ActionViewFlipper() {
         List<String> mangQuangCao = new ArrayList<>();
@@ -180,6 +179,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if (id == R.id.nav_acc){
             Intent acc = new Intent(getApplicationContext(), acc_activity.class);
             startActivity(acc);
+        }else if (id == R.id.nav_lap){
+            Intent laptop = new Intent(getApplicationContext(), laptop_activity.class);
+            startActivity(laptop);
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
